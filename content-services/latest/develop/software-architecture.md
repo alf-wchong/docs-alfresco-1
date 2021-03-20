@@ -100,13 +100,13 @@ associated with other nodes in a peer to peer relationship, in a similar fashion
 image file. All nodes live in a **Store**. Each store has a root node at the top, and nodes can reference specific files, 
 as shown in the following diagram:
 
-![](../images/dev-repository-concepts-logical-structure.png)
+![]({% link content-services/images/dev-repository-concepts-logical-structure.png %})
 
 ### Stores Overview
 The Repository contains multiple logical stores. However, a node lives only in one store. Most of the stores are 
 implemented as data in the connected RDBMS, only the **Content Store** is implemented so as to store items on disk:
 
-![](../images/dev-repository-concepts-stores-overview.png)
+![]({% link content-services/images/dev-repository-concepts-stores-overview.png %})
 
 #### The main stores
 * The **Working Store** (`workspace://SpacesStore`) contains the metadata for all active/live nodes in the Repository. 
@@ -146,7 +146,7 @@ Then, based on business policies that have been decided, gradually move the data
 cheaper tier-2 drives such as Fiber Channel (FC) drives or Serial ATA drives. In this way, it is possible to manage 
 the storage of content more cost effectively:
 
-![](../images/dev-repository-concepts-content-store-selectors.png)
+![]({% link content-services/images/dev-repository-concepts-content-store-selectors.png %})
 
 #### Store Reference
 When working with the APIs a store is accessed via its **store reference**, for example `workspace://SpacesStore`. The 
@@ -242,7 +242,7 @@ TODO: add some new roles...
 
 Permission settings involve three entities:
 
-![](../images/dev-repository-concepts-permission-mapping.png)
+![]({% link content-services/images/dev-repository-concepts-permission-mapping.png %})
 
 There are a number of out-of-the-box roles:
 
@@ -268,7 +268,7 @@ of the node. Owner status overrides any other permission setting. As owner you c
 The diagram illustrates a typical folder node with a child file node when it has been classified with the out-of-the-box 
 default document content model:
 
-![](../images/dev-repository-concepts-folder-file-node-overview.png)
+![]({% link content-services/images/dev-repository-concepts-folder-file-node-overview.png %})
 
 ## Detailed architecture
 Now when we got an idea of how the Content Services architecture looks like on a high level, and we have learned about the 
