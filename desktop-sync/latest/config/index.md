@@ -196,16 +196,18 @@ syncmanager.freeSpaceRestart=3500M
 The free space properties are specified as `syncmanager.freeSpace<Property>=<value>[<scale>]` where:
 
 * `<value>` is an integer
-* `<scale>` provides optional scaling using `K|M|G|T` for kilobyte, megabyte, gigabyte, and terabyte values
+* `<scale>` provides scaling using `B|K|M|G|T` for byte, kilobyte, megabyte, gigabyte, and terabyte values
 * add `+/-` in front of the `<value>` to specify values relative to the currently available free space: '+' specifies the limit above the currently available disk space; '-' specifies the limit below the currently available disk space.
 
 To specify a simple limit, without using any scaling, use this example:
 
 ```bash
-syncmanager.freeSpaceLimit=1073741824
+syncmanager.freeSpaceLimit=1073741824B
 ```
 
 In this example, the minimum amount of disk space required for content syncing is set to 1GB.
+
+>**Note:** A letter representing the scale is needed, if not the last digit is taken as the scale and treated as B.
 
 To specify relative values above the current available disk space, use this example:
 
